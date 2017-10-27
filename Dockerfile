@@ -1,5 +1,5 @@
-FROM debian:jessie
-MAINTAINER SuperITMan <admin@superitman.com>
+FROM debian:stretch
+MAINTAINER Nilesh <nilesh@cloudgeni.us>
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update -y -q && \

@@ -16,7 +16,7 @@ $ docker run -d -it \
 --privileged \
 superitman/fail2ban:latest
 ```
-    
+
 If you want to use your own jail.local and your own filters:
 ```
 $ docker run -d -it \
@@ -45,17 +45,17 @@ Copy your filters in filter.d folder, your actions in action.d and your jail.loc
 
 Then build your image
 ```
-$ docker build -t your-custom-fail2ban .
+docker build -t cloudgenius/fail2ban .
+```
+
+Then push your image
+```
+docker push cloudgenius/fail2ban .
 ```
 
 When your image is ready, run it:
 ```
-$ docker run -d -it \
--v /var/log:/var/log \
---name fail2ban \
---net host \
---privileged \
-your-custom-fail2ban
+privileged/fail2ban
 ```
 
 ## To-Do
